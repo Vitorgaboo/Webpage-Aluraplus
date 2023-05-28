@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+    --cor-principal:#FFFFFF;
+    --cor-Secundaria:#C0C0C0;
+    --cor-terciaria: #167bf7; 
+    --background:#00030c;
+    /*Tudo Isso facilita na hora de trocar cores ou fontes variaveis permite mudança em todo o projeto em uma linha*/
+    --font-principal:'Inter', sans-serif;
+}
+body{
+    background-color: var(--background);
+    color: var(--cor-principal);
+    font-family: var(--font-principal);
+    font-style: 16px;
+    font-weight: 400;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.principal{
+    background-image: url(img/Background.png); /* Esse comando adiciona uma imagem no background*/
+    background-repeat: no-repeat; /* Esse comando faz com que não repita a imagem do background*/
+    background-size: contain;
+    align-items: center; /* como não definimos linha e sim grid ele irá alinhar no centro da coluna*/
+    text-align: center; /* alinha tudo que esta dentro desse bloco*/
+}
+.container{
+    height: 100vh; /*Altura e width largura 100% da tela */
+    display: grid;
+    grid-template-columns: 50% 50%; /* seprara os elementos da tela um ao lado do outro ou um baixo do outro nesse caso por coluna*/
+}
+.container__botao {
+    background-color: var(--cor-terciaria);
+    border-radius: 5px; /*arredonda as bordas do elemento*/
+    padding: 1em; /*bordas internas*/
+    color: var(--cor-principal) ;
+    display: block; /* esse comando ira fazer o botão ocupar o block inteiro que nesse momento está inline ou seja ocupara a largura inteira*/
+   text-decoration: none;
+   margin-bottom: 1em ;
+}
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--cor-principal);
+}
+.paragrafo{
+    font-size: 12px;
+    color:var(--cor-Secundaria);
+}
+.titulo__principal {
+    font-size:28px; /*Tamanho da fonte*/
+   font-weight:700;/*peso da fonte */
+}
+.container__imagem{
+    margin: 1em 0 2em 0; /* O primeiro valor e a parte do topo, o segundo a direita, o terceiro a parte de baixo, o quarto a parte da esquerda.*/
+}
+.container__caixa{
+    margin: 0 6em; /* quando temos 2 valores o primeiro vale para cima e para baixo e o segundo para esquerda e para a direira*/
+}
+.secundario__imagem{
+    width: 80%;
+}
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--cor-principal);
+    margin-bottom: 0.1em;
+}
+.descricao__paragrafo{
+    color: var(--cor-Secundaria);
+}
+.secundario_botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+.cantainer__descricao{
+    padding: 2em;
+}
+.novo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.dispositivos_lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.dispositivos{
+    text-align: center;
+}
+.dispositivos_titulo{
+    font-size: 48px;
+}
+.lista_iten{
+    font-size: 32px ;
+    color: var(--cor-principal);
+}
+.link{
+    text-decoration: none;
+    color: var(--cor-principal);
+    margin-left: 1em;
+}
+.rodape__lista{
+    display: flex;
+    list-style-type: none;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 1em;
+}
+.rodape{
+    margin: 5em 3em;
+    text-align: center;
+   
+}
+.rodape_texto{
+   margin: 1em 0;
+    font-size: 14px;
+    align-items: center;
+    color: var(--cor-Secundaria);
+    
+}
+.link:hover{
+        color: var(--cor-terciaria);
+        transition: 0.5s;
+}
+.secundario_botao:hover{
+background-color: var(--cor-principal);
+color: var(--background);
+transition: 0.5s;
+}
+.container__botao:hover{
+    background-color: var(--cor-principal);
+    color: var(--background);
+    transition: 0.5s;
+}
